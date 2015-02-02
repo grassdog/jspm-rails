@@ -6,7 +6,7 @@
 
   <% if Rails.env.production? %>
     <script src="/js/jspm_packages/traceur-runtime.js"></script>
-    <script src="<%= require 'build_directory'; BuildDirectory.base_url %>/main.js"></script>
+    <script src="<%= require 'build_directory'; BuildDirectory.url_for "main.js" %>"></script>
   <% else %>
     <script src="/js/jspm_packages/system.js"></script>
     <script src="/js/config.js"></script>
