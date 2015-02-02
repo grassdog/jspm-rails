@@ -3,6 +3,14 @@
 <head>
   <title>JspmRails</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
+
+  <!-- TODO Put prod switch in here -->
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+  <script>
+    System.import('lib/main')
+  </script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>

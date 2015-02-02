@@ -1,0 +1,8 @@
+{
+  "jspm": {
+    "name": "jspm-rails",
+    "directories": {
+      "baseURL": "public"
+    }
+  }
+}
