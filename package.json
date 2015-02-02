@@ -2,7 +2,7 @@
   "jspm": {
     "name": "jspm-rails",
     "directories": {
-      "baseURL": "public"
+      "baseURL": "public/js"
     }
   }
 }
