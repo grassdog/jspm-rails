@@ -4,12 +4,16 @@
   <title>JspmRails</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
-  <!-- TODO Put prod switch in here -->
-  <script src="/js/jspm_packages/system.js"></script>
-  <script src="/js/config.js"></script>
-  <script>
-    System.import('js/lib/main')
-  </script>
+  <% if Rails.env.production? %>
+    <script src="/js/jspm_packages/traceur-runtime.js"></script>
+    <script src="<%= require 'build_directory'; BuildDirectory.base_url %>/main.js"></script>
+  <% else %>
+    <script src="/js/jspm_packages/system.js"></script>
+    <script src="/js/config.js"></script>
+    <script>
+      System.import('js/lib/main')
+    </script>
+  <% end %>
 
   <%= csrf_meta_tags %>
 </head>
