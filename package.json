@@ -2,8 +2,7 @@
   "jspm": {
     "name": "jspm-rails",
     "directories": {
-      "baseURL": "public/js",
-      "packages": "public/jspm_packages"
+      "baseURL": "public/js"
     },
     "dependencies": {
       "jsx": "jspm:jsx@^0.1.1",

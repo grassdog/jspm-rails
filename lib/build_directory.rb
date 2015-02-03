@@ -2,12 +2,14 @@ require "fileutils"
 
 module BuildDirectory
 
-  def self.url_for(file)
+  REVISION = `git log --pretty=format:'%h' -n 1`
+
+  def self.js_url_for(file)
     "#{base_url}/#{file}"
   end
 
   def self.file_path
-    base_dir.join JspmRails::REVISION
+    base_dir.join REVISION
   end
 
   def self.clean
@@ -18,8 +20,6 @@ module BuildDirectory
     FileUtils.mkdir_p file_path
   end
 
-  # Helpers
-
   BASE_NAME = "jsb"
 
   def self.base_dir
@@ -27,6 +27,6 @@ module BuildDirectory
   end
 
   def self.base_url
-    "/#{BASE_NAME}/#{JspmRails::REVISION}"
+    "/#{BASE_NAME}/#{REVISION}"
   end
 end

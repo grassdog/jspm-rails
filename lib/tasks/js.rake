@@ -14,8 +14,8 @@ namespace :js do
   end
 
   desc "Build production version of Javascript"
-  task build: :out_dir do
-    sh "jspm bundle-sfx --minify lib/main #{BuildDirectory.file_path}/main.js"
+  task build: [:environment, :clean, :out_dir] do
+    sh "jspm bundle-sfx --minify lib/main.jsx! #{BuildDirectory.file_path}/lib/main.js"
   end
 end
 

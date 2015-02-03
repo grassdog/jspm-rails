@@ -1,15 +1,5 @@
 <h1>Widgets</h1>
 <div id="container"></div>
 
-
-<% if Rails.env.production? %>
-  <script src="/jspm_packages/traceur-runtime.js"></script>
-  <script src="<%= require 'build_directory'; BuildDirectory.url_for "main.jsx!" %>"></script>
-<% else %>
-  <script src="/jspm_packages/system.js"></script>
-  <script src="/js/config.js"></script>
-  <script>
-    System.import('js/lib/main.jsx!');
-  </script>
-<% end %>
+<%= js_tags_for "lib/main.jsx!" %>
 
