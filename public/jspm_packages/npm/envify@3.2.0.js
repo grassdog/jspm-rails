@@ -1,0 +1,1 @@
+module.exports = require("npm:envify@3.2.0/index");

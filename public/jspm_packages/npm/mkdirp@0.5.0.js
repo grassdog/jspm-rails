@@ -1,0 +1,1 @@
+module.exports = require("npm:mkdirp@0.5.0/index");

@@ -1,0 +1,6 @@
+{
+  "registry": "npm",
+  "dependencies": {
+    "assert": "^1.1.2"
+  }
+}

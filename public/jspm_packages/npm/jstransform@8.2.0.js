@@ -1,0 +1,1 @@
+module.exports = require("npm:jstransform@8.2.0/src/jstransform");

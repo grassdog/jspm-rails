@@ -1,0 +1,1 @@
+module.exports = require("npm:bn.js@1.1.0/lib/bn");

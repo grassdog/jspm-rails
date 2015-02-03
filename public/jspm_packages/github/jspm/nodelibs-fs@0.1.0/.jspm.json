@@ -1,0 +1,12 @@
+{
+  "registry": "npm",
+  "jspm": {},
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "assert": "assert@^1.1.2",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0"
+  }
+}

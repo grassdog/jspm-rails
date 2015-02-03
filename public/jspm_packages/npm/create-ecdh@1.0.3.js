@@ -1,0 +1,1 @@
+module.exports = require("npm:create-ecdh@1.0.3/index");
