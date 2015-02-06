@@ -3,6 +3,7 @@ require 'build_directory'
 module ApplicationHelper
   JS_BASE_PATH = "/js/"
 
+  # Output a list of javascript tag files to load JSPM managed JS files
   def js_tags_for(*files)
 
     return bundled_js_tags_for(files) if Rails.env.production?
